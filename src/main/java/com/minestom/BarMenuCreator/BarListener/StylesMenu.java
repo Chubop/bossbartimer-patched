@@ -12,35 +12,34 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.ItemStack;
 
-public class ColorsMenu implements Listener {
+public class StylesMenu implements Listener {
 
     private BossBarTimer plugin;
 
-    public ColorsMenu(BossBarTimer plugin) {
+    public StylesMenu(BossBarTimer plugin) {
         this.plugin = plugin;
     }
 
     @EventHandler
     public void onInteract(InventoryClickEvent event) {
-
-        String inventoryName = event.getView().getTopInventory().getTitle();
+        String inventoryName = "event.getView().getTopInventory().getTitle()";
         InventoryType.SlotType slotType = event.getSlotType();
-        if (inventoryName.equals("Choose a color") && slotType != InventoryType.SlotType.OUTSIDE) {
-
+        if (inventoryName.equals("Choose a style") && slotType != InventoryType.SlotType.OUTSIDE) {
             ItemStack item = event.getCurrentItem();
             if (item == null) return;
             event.setCancelled(true);
 
             Player player = (Player) event.getWhoClicked();
-            PlayerEditingData editingData = plugin.getUtilities().getEditingData(player);
-            BossBarHandler bossBarHandler = editingData.getBossBarHandler();
-
             int slot = event.getRawSlot();
 
+
             if (slot != 8 && item.hasItemMeta()) {
-                String color = ChatColor.stripColor(item.getItemMeta().getDisplayName());
-                bossBarHandler.setBarColor(color);
-                bossBarHandler.setColor(color);
+                PlayerEditingData editingData = plugin.getUtilities().getEditingData(player);
+                BossBarHandler bossBarHandler = editingData.getBossBarHandler();
+                String style = ChatColor.stripColor(item.getItemMeta().getDisplayName()).replace(" ", "_");
+
+                bossBarHandler.setBarStyle(style);
+                bossBarHandler.setStyle(style);
             }
             if (slot == 8 && item.hasItemMeta()) {
                 BossbarMenuMaker.createEditMenu(player, plugin);

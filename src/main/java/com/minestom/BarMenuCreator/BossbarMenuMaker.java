@@ -78,10 +78,10 @@ public class BossbarMenuMaker {
         }
         lore.addAll(Arrays.asList("&ePeriod: &7" + bossBarHandler.getNamePeriod(), "", "&eLeft-Click &7to add a new frame", "&eRight-Click &7to delete the last frame", "&eShift-Left-Click &7to remove all frames", "&eShift-Right-Click &7to edit the period time"));
 
-        itemBuilder(inv, "&a&lChange Color", Material.INK_SACK, 0, 0, Arrays.asList("&7Click here to enter the", "&7edit color mode.", "", "&eCurrent Color: &a" + bossBarHandler.getColor()));
-        itemBuilder(inv, "&a&lChange Style", Material.EMPTY_MAP, 0, 1, Arrays.asList("&7Click here to enter the", "&7edit style mode.", "", "&eCurrent Style: &a" + bossBarHandler.getStyle()));
+        itemBuilder(inv, "&a&lChange Color", Material.INK_SAC, 0, 0, Arrays.asList("&7Click here to enter the", "&7edit color mode.", "", "&eCurrent Color: &a" + bossBarHandler.getColor()));
+        itemBuilder(inv, "&a&lChange Style", Material.MAP, 0, 1, Arrays.asList("&7Click here to enter the", "&7edit style mode.", "", "&eCurrent Style: &a" + bossBarHandler.getStyle()));
         itemBuilder(inv, "&a&lChange Display Name", Material.BOOK, 0, 2, lore);
-        itemBuilder(inv, "&a&lAdvanced Settings", Material.REDSTONE_COMPARATOR, 0, 3, Arrays.asList("&7Click here to see", "&7more advanced settings.", "&7Such as time and commands"));
+        itemBuilder(inv, "&a&lAdvanced Settings", Material.COMPARATOR, 0, 3, Arrays.asList("&7Click here to see", "&7more advanced settings.", "&7Such as time and commands"));
         itemBuilder(inv, "&a&lSave &7| &c&lCancel", Material.BARRIER, 0, 4, Arrays.asList("", "&eLeft-Click &7to save the changes.", "&eShift-Left-Click &7to cancel the changes.", "", "&7BarName: &c" + editingData.getBarKeyName()));
 
         player.openInventory(inv);
@@ -90,13 +90,13 @@ public class BossbarMenuMaker {
     public static void createColorMenu(Player player) {
         Inventory inv = Bukkit.createInventory(player, 9, "Choose a color");
 
-        itemBuilder(inv, "&a&lGreen", Material.INK_SACK, 10, 0, Arrays.asList("&7Click here to change", "&7the bar color."));
-        itemBuilder(inv, "&b&lBlue", Material.INK_SACK, 12, 1, Arrays.asList("&7Click here to change", "&7the bar color."));
-        itemBuilder(inv, "&d&lPink", Material.INK_SACK, 9, 2, Arrays.asList("&7Click here to change", "&7the bar color."));
-        itemBuilder(inv, "&5&lPurple", Material.INK_SACK, 13, 3, Arrays.asList("&7Click here to change", "&7the bar color."));
-        itemBuilder(inv, "&e&lYellow", Material.INK_SACK, 11, 4, Arrays.asList("&7Click here to change", "&7the bar color."));
-        itemBuilder(inv, "&f&lWhite", Material.INK_SACK, 15, 5, Arrays.asList("&7Click here to change", "&7the bar color."));
-        itemBuilder(inv, "&4&lRed", Material.INK_SACK, 1, 6, Arrays.asList("&7Click here to change", "&7the bar color."));
+        itemBuilder(inv, "&a&lGreen", Material.INK_SAC, 10, 0, Arrays.asList("&7Click here to change", "&7the bar color."));
+        itemBuilder(inv, "&b&lBlue", Material.INK_SAC, 12, 1, Arrays.asList("&7Click here to change", "&7the bar color."));
+        itemBuilder(inv, "&d&lPink", Material.INK_SAC, 9, 2, Arrays.asList("&7Click here to change", "&7the bar color."));
+        itemBuilder(inv, "&5&lPurple", Material.INK_SAC, 13, 3, Arrays.asList("&7Click here to change", "&7the bar color."));
+        itemBuilder(inv, "&e&lYellow", Material.INK_SAC, 11, 4, Arrays.asList("&7Click here to change", "&7the bar color."));
+        itemBuilder(inv, "&f&lWhite", Material.INK_SAC, 15, 5, Arrays.asList("&7Click here to change", "&7the bar color."));
+        itemBuilder(inv, "&4&lRed", Material.INK_SAC, 1, 6, Arrays.asList("&7Click here to change", "&7the bar color."));
         itemBuilder(inv, "&6&lBack", Material.ARROW, 0, 8, Arrays.asList("&7Click here", "&7to go back."));
 
         player.openInventory(inv);
@@ -105,11 +105,11 @@ public class BossbarMenuMaker {
     public static void createStyleMenu(Player player) {
         Inventory inv = Bukkit.createInventory(player, 9, "Choose a style");
 
-        itemBuilder(inv, "&a&lSolid", Material.EMPTY_MAP, 0, 2, Arrays.asList("&7Click here to change", "&7the bar style."));
-        itemBuilder(inv, "&a&lSegmented 6", Material.EMPTY_MAP, 0, 3, Arrays.asList("&7Click here to change", "&7the bar style."));
-        itemBuilder(inv, "&a&lSegmented 10", Material.EMPTY_MAP, 0, 4, Arrays.asList("&7Click here to change", "&7the bar style."));
-        itemBuilder(inv, "&a&lSegmented 12", Material.EMPTY_MAP, 0, 5, Arrays.asList("&7Click here to change", "&7the bar style."));
-        itemBuilder(inv, "&a&lSegmented 20", Material.EMPTY_MAP, 0, 6, Arrays.asList("&7Click here to change", "&7the bar style."));
+        itemBuilder(inv, "&a&lSolid", Material.MAP, 0, 2, Arrays.asList("&7Click here to change", "&7the bar style."));
+        itemBuilder(inv, "&a&lSegmented 6", Material.MAP, 0, 3, Arrays.asList("&7Click here to change", "&7the bar style."));
+        itemBuilder(inv, "&a&lSegmented 10", Material.MAP, 0, 4, Arrays.asList("&7Click here to change", "&7the bar style."));
+        itemBuilder(inv, "&a&lSegmented 12", Material.MAP, 0, 5, Arrays.asList("&7Click here to change", "&7the bar style."));
+        itemBuilder(inv, "&a&lSegmented 20", Material.MAP, 0, 6, Arrays.asList("&7Click here to change", "&7the bar style."));
         itemBuilder(inv, "&6&lBack", Material.ARROW, 0, 8, Arrays.asList("&7Click here", "&7to go back."));
 
         player.openInventory(inv);

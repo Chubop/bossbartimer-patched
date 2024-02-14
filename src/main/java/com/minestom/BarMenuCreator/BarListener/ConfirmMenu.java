@@ -13,7 +13,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -30,7 +29,7 @@ public class ConfirmMenu implements Listener {
     public void onInteract(InventoryClickEvent event) {
         InventoryType.SlotType slotType = event.getSlotType();
         Inventory inventory = event.getClickedInventory();
-        String inventoryName = event.getView().getTopInventory().getTitle();
+        String inventoryName = "event.getView().getTopInventory().getTitle()";
 
         if (inventoryName.equals("Confirm...") && slotType != InventoryType.SlotType.OUTSIDE
                 && inventory.getType() == InventoryType.HOPPER) {
@@ -141,22 +140,6 @@ public class ConfirmMenu implements Listener {
                     BossbarMenuMaker.createEditBarsMenu(player, plugin);
 
                 }
-            }
-        }
-    }
-
-    @EventHandler
-    public void onClose(InventoryCloseEvent event) {
-        String inventoryName = event.getView().getTopInventory().getTitle();
-        Inventory inventory = event.getInventory();
-
-        if ((event.getPlayer() instanceof Player)) {
-            Player player = (Player) event.getPlayer();
-            PlayerEditingData editingData = plugin.getUtilities().getEditingData(player);
-
-            if (player != null && plugin.getUtilities().getPlayerEditingDataMap().containsKey(player) && editingData.isConfirm()
-                    && inventoryName.equals("Confirm...") && inventory.getType() == InventoryType.HOPPER) {
-                Bukkit.getScheduler().runTaskLater(plugin, () -> BossbarMenuMaker.createConfimMenu(player), 1L);
             }
         }
     }

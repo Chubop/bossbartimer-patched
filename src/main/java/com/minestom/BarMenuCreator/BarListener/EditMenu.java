@@ -28,7 +28,7 @@ public class EditMenu implements Listener {
     @EventHandler
     public void onInteract(InventoryClickEvent event) {
         Inventory inventory = event.getClickedInventory();
-        String inventoryName = event.getView().getTopInventory().getTitle();
+        String inventoryName = "event.getView().getTopInventory().getTitle()";
         InventoryType.SlotType slotType = event.getSlotType();
         if (inventoryName.equals("Edit Mode") && slotType != InventoryType.SlotType.OUTSIDE
                 && inventory.getType() == InventoryType.HOPPER) {

@@ -28,7 +28,7 @@ public class AvancedMenu implements Listener {
     @EventHandler
     public void onInteract(InventoryClickEvent event) {
         Inventory inventory = event.getClickedInventory();
-        String inventoryName = event.getView().getTopInventory().getTitle();
+        String inventoryName = event.getView().getTopInventory().toString();
         InventoryType.SlotType slotType = event.getSlotType();
         if (inventoryName.equals("Advanced Settings") && slotType != InventoryType.SlotType.OUTSIDE
                 && inventory.getType() == InventoryType.HOPPER) {

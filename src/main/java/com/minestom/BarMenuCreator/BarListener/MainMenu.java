@@ -23,7 +23,7 @@ public class MainMenu implements Listener {
     @EventHandler
     public void onInteract(InventoryClickEvent event) {
         Inventory inventory = event.getClickedInventory();
-        String inventoryName = event.getView().getTopInventory().getTitle();
+        String inventoryName = "event.getView().getTopInventory().getTitle()";
         InventoryType.SlotType slotType = event.getSlotType();
 
         if (inventoryName.equals("BossbarTimer") && slotType != InventoryType.SlotType.OUTSIDE

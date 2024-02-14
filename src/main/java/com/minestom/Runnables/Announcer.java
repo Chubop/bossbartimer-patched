@@ -1,10 +1,11 @@
 package com.minestom.Runnables;
 
 import com.minestom.BossBarTimer;
-import com.minestom.DataHandler.BossBarHandler;
-import com.minestom.DataHandler.PlayerEditingData;
 import com.minestom.Utils.MessageUtil;
 import com.minestom.Utils.Utilities;
+import com.minestom.DataHandler.BossBarHandler;
+import com.minestom.DataHandler.PlayerEditingData;
+
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;
 

@@ -6,7 +6,7 @@ import com.minestom.DataHandler.BossBarHandler;
 import com.minestom.DataHandler.PlayerEditingData;
 import com.minestom.Utils.MessageUtil;
 import com.minestom.Utils.Utilities;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

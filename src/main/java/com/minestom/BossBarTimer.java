@@ -121,15 +121,8 @@ public class BossBarTimer extends JavaPlugin implements Listener {
 
     private void registerListeners() {
         PluginManager pluginManager = getServer().getPluginManager();
-        pluginManager.registerEvents(new MainMenu(this), this);
-        pluginManager.registerEvents(new EditMenu(this), this);
-        pluginManager.registerEvents(new ColorsMenu(this), this);
-        pluginManager.registerEvents(new StylesMenu(this), this);
-        pluginManager.registerEvents(new ConfirmMenu(this), this);
-        pluginManager.registerEvents(new AvancedMenu(this), this);
         pluginManager.registerEvents(new JoinListener(this), this);
         pluginManager.registerEvents(new InChatEdition(this), this);
-        pluginManager.registerEvents(new EditCurrentBarsMenu(this), this);
     }
 
     public Utilities getUtilities() {

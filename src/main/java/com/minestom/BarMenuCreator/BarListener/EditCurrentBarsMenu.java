@@ -23,7 +23,7 @@ public class EditCurrentBarsMenu implements Listener {
 
     @EventHandler
     public void onInteract(InventoryClickEvent event) {
-        String inventoryName = event.getView().getTopInventory().getTitle();
+        String inventoryName = "event.getView().getTopInventory().getTitle()";
         InventoryType.SlotType slotType = event.getSlotType();
         if (inventoryName.equals("Select a bar to edit") && slotType != InventoryType.SlotType.OUTSIDE) {
 

@@ -3,13 +3,13 @@ package com.minestom.Utils;
 import com.minestom.BossBarTimer;
 import com.minestom.DataHandler.BossBarHandler;
 import com.minestom.DataHandler.PlayerEditingData;
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.time.DurationFormatUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.DurationFormatUtils;
 
 import java.util.HashMap;
 import java.util.List;
